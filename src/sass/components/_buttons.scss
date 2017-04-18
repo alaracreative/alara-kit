@@ -1,0 +1,19 @@
+.button {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: .75em;
+  cursor: pointer;
+  border: 0;
+  &.is-small {
+    padding: .5rem;
+    font-size: .75rem;
+  }
+  &.is-primary {
+    background: $primary;
+    color: $white;
+    &:hover {
+      background: darken($primary, 20);
+    }
+  }
+}

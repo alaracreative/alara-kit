@@ -1,0 +1,23 @@
+.level {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.level-left {
+  flex: 1 0 auto;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.level-center {
+  flex: 1 0 auto;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.level-right {
+  flex: 1 0 auto;
+  text-align: right;
+}

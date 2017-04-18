@@ -1,0 +1,19 @@
+$black: hsl(0, 0%, 4%);
+$white: hsl(0, 0%, 100%);
+
+$blue: hsl(213, 74%, 48%);
+$green: hsl(97, 74%, 48%);
+$yellow: hsl(59, 74%, 48%);
+$red: hsl(3, 74%, 48%);
+
+$primary: $blue;
+$secondary: $green;
+
+$color-text: rgba(0,0,0,0.8);
+$color-link: $primary;
+
+$color-link-hover: darken($primary, 10);
+
+$color-table: $color-text;
+
+$color-table-background: $white;

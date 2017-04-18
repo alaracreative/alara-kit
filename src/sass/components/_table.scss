@@ -1,0 +1,24 @@
+.table {
+  background-color: $color-table-background;
+  color: $color-table;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  @include respond-to(small) {
+    width: 90%;
+  }
+  td {
+    padding: 1em;
+    vertical-align: middle;
+  }
+  &.is-striped {
+    tr:nth-child(even) {
+      background: rgba($black, .2);
+    }
+    tr:nth-child(odd) {
+      background: rgba($black, .1);
+    }
+  }
+  &.has-small-text {
+    font-size: .85rem;
+  }
+}

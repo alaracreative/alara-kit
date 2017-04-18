@@ -1,0 +1,30 @@
+html,
+body {
+  font-size: $font-size;
+  line-height: $baseline;
+}
+
+body {
+  font-family: $text-font-family;
+  color: $color-text;
+  background-color: transparent;
+}
+
+a {
+  color: $color-link;
+  &:hover {
+    color: $color-link-hover;
+  }
+}
+
+.has-text-left {
+  text-align: left;
+}
+
+.has-text-centered {
+  text-align: center;
+}
+
+.has-text-right {
+  text-align: right;
+}
