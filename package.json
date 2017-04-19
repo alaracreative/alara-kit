@@ -1,6 +1,6 @@
 {
   "name": "alara-kit",
-  "version": "0.1-alpha.2",
+  "version": "0.1.0-alpha.1",
   "description": "A web framework for Alara Creative projects. Open for all to use.",
   "main": "dist/css/core.css",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/alaracreative/alara-kit.git"
+    "url": "git+https://github.com/alaracreative/alara-kit.git"
   },
   "keywords": [
     "css",
