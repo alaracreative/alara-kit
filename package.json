@@ -1,7 +1,7 @@
 {
-  "name": "@alaracreative/alara-kit",
+  "name": "alara-kit",
   "version": "0.1.0",
-  "description": "A web framework for Alara",
+  "description": "A web framework for Alara Creative projects. Open for all to use.",
   "main": "dist/css/core.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,8 +19,8 @@
     "framework",
     "sass"
   ],
-  "author": "Scott Zirkel - Alara Creative",
-  "license": "CC-BY-NC-ND-4.0",
+  "author": "Scott Zirkel for Alara Creative",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/alaracreative/alara-kit/issues"
   },
