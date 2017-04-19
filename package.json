@@ -1,6 +1,6 @@
 {
   "name": "@alaracreative/alara-kit",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A web framework for Alara",
   "main": "dist/css/core.css",
   "scripts": {
