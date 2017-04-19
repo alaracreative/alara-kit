@@ -2,13 +2,15 @@
 @import 'utils/colors';
 @import 'utils/functions';
 @import 'utils/mixins';
-@import 'base/typography';
-@import 'layout/container';
-@import 'grid/columns';
-@import 'components/level';
-@import 'components/card';
-@import 'components/buttons';
-@import 'components/table';
-@import 'components/forms';
 
-@import '_shame';
+@import 'base/typography';
+
+@import 'layout/columns';
+@import 'layout/container';
+
+@import 'components/buttons';
+@import 'components/card';
+@import 'components/forms';
+@import 'components/group';
+@import 'components/nav';
+@import 'components/table';
