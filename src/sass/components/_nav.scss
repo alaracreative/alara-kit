@@ -1,23 +1,31 @@
-.level {
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  a {
+    text-decoration: none;
+  }
+  &.is-secondary {
+    a {
+      color: $secondary;
+    }
+  }
 }
 
-.level-left {
+.nav-left {
   flex: 1 0 auto;
   text-align: left;
   align-self: flex-start;
 }
 
-.level-center {
+.nav-center {
   flex: 1 0 auto;
   text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.level-right {
+.nav-right {
   flex: 1 0 auto;
   text-align: right;
 }
