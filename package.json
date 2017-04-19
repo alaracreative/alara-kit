@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/alaracreative/alara-kit.git"
+    "url": "git+https://github.com/alaracreative/alara-kit.git"
   },
   "keywords": [
     "css",
