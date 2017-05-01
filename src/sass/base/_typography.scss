@@ -17,6 +17,78 @@ a {
   }
 }
 
+@each $header, $size, $line in (1, $heading-font-size-1 $heading-baseline-1),
+                               (2, $heading-font-size-2, $heading-baseline-2),
+                               (3, $heading-font-size-3, $heading-baseline-3),
+                               (4, $heading-font-size-4, $heading-baseline-4),
+                               (5, $heading-font-size-5, $heading-baseline-5),
+                               (6, $heading-font-size-6, $heading-baseline-6)
+{
+  h#{$header},
+  .is-title.is-#{$header},
+  .is-subtitle.is-#{$header} {
+    font-size: $size;
+    line-height: $line;
+  }
+}
+
+p {
+  font-size: $font-size;
+  line-height: $baseline;
+  &.bigger {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+  &.big {
+    font-size: 1.125rem;
+    line-height: 1.55;
+  }
+  &.small {
+    font-size: .875rem;
+    line-height: 1.428;
+  }
+  &.smaller {
+    font-size: .75rem;
+    line-height: 1.66;
+  }
+}
+
+code, samp, kbd {
+  font-family: "Courier New", Courier, monospace, sans-serif;
+  text-align: left;
+  color: #555;
+}
+
+pre {
+  background: rgb(251, 249, 246);
+  border: 1px solid rgb(240, 237, 230);
+  padding: 0.1em 0.5em 0.3em 0.7em;
+  margin: 1.7em 0 1.7em 0.3em;
+  overflow: auto;
+  position: relative;
+  white-space: pre-line;
+  code {
+    white-space: nowrap;
+    font-size: .75rem;
+    line-height: 1.25;
+    &[class]:after {
+      content: 'highlight: ' attr(class);
+      display: block; text-align: right;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: smaller;
+      padding-top: 5px;
+    }
+    .tag {
+      color: red;
+      .attributes {
+        color: #800;
+      }
+    }
+  }
+}
+
 .has-text-left {
   text-align: left;
 }
@@ -27,4 +99,8 @@ a {
 
 .has-text-right {
   text-align: right;
+}
+
+.has-no-margin {
+  margin: 0;
 }

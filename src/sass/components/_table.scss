@@ -3,19 +3,53 @@
   color: $color-table;
   margin-bottom: 1.5rem;
   width: 100%;
+  display: block;
   @include respond-to(small) {
-    width: 90%;
+    display: table;
+    border-collapse: collapse;
+  }
+  thead,
+  tbody,
+  tfoot {
+    display: block;
+    @include respond-to(small) {
+      display: table-row-group;
+    }
+  }
+  tr {
+    display: block;
+    margin-bottom: 1.5rem;
+    @include respond-to(small) {
+      margin-bottom: 0;
+      display: table-row;
+    }
   }
   td {
     padding: 1em;
     vertical-align: middle;
+    display: block;
+    text-align: center;
+    @include respond-to(small) {
+      text-align: inherit;
+      display: table-cell;
+    }
+  }
+  td.is-wide {
+    @include respond-to(small) {
+      width: calc(100%/3);
+    }
+    @include respond-to(medium) {
+      width: 40%;
+    }
   }
   &.is-striped {
-    tr:nth-child(even) {
-      background: rgba($black, .2);
-    }
-    tr:nth-child(odd) {
-      background: rgba($black, .1);
+    tbody {
+      tr:nth-child(even) {
+        background: rgba($black, .2);
+      }
+      tr:nth-child(odd) {
+        background: rgba($black, .1);
+      }
     }
   }
   &.has-small-text {

@@ -9,8 +9,44 @@
 @import 'layout/container';
 
 @import 'components/buttons';
+@import 'components/box';
 @import 'components/card';
 @import 'components/forms';
 @import 'components/group';
+@import 'components/media';
 @import 'components/nav';
+@import 'components/tabs';
 @import 'components/table';
+
+// example styles
+.example {
+  padding: 1em;
+  border: 1px solid rgba($black, .2);
+  border-radius: .5rem;
+  margin-bottom: 1em;
+  @include respond-to(small) {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.example-heading {
+  @include respond-to(small) {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.example-body {
+  @include respond-to(small) {
+    flex: 2;
+  }
+}
+
+.example-code {
+  @include respond-to(small) {
+    flex: 1;
+  }
+}
