@@ -13,6 +13,7 @@ let mix = require('laravel-mix');
 
 mix.js('src/js/app.js', 'js/alara-kit.js')
 .sass('src/sass/core.scss', 'css/alara-kit.css')
+.sass('docs/sass/docs.scss', '../docs/css/alara-kit-docs.css')
 
 mix.setPublicPath('dist')
 
