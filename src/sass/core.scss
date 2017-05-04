@@ -50,3 +50,13 @@
     flex: 1;
   }
 }
+
+.column-preview {
+  text-align: center;
+  color: $white;
+  line-height: 4em;
+  background: $primary;
+  &:nth-child(even) {
+    background: $secondary;
+  }
+}

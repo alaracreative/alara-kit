@@ -1,4 +1,5 @@
 .row {
+  min-width: 100%;
   @include respond-to(small) {
     display: flex;
     flex-wrap: nowrap;
@@ -58,7 +59,6 @@
     &.has-wrap {
       flex-wrap: wrap;
     }
-
 }
 
 .column {
@@ -67,10 +67,16 @@
   flex-grow: 1;
   flex-shrink: 1;
   @for $i from 1 through $grid-columns {
+    $distance: ($i / $grid-columns) * 100%;
     &.is-#{$i} {
       @include respond-to(small) {
         flex: none;
-        width: ($i / $grid-columns) * 100%;
+        width: $distance;
+      }
+    }
+    &.is-offset-#{$i} {
+      @include respond-to(small) {
+        margin-left: $distance;
       }
     }
   }
@@ -82,22 +88,31 @@
     flex: none;
     width: 50%;
   }
+  &.is-offset-half {
+    margin-left: 50%;
+  }
   &.is-one-third {
     flex: none;
     width: calc(100%/3);
   }
+  &.is-offset-one-third {
+    margin-left: 50%;
+  }
   &.is-two-thirds {
     flex: none;
     width: calc(100%/1.5);
+  }
+  &.is-offset-two-thirds {
+    margin-left: 50%;
   }
 }
 
 .row.has-gutters {
   .column {
     @for $i from 1 through $grid-columns {
+      $width: (($i / $grid-columns) * 100%);
       &.is-#{$i} {
         @include respond-to(small) {
-          $width: (($i / $grid-columns) * 100%);
           width: calc(#{$width} - (#{$grid-gutter} * 2));
           margin-left: $grid-gutter;
           margin-right: $grid-gutter;
@@ -108,6 +123,9 @@
             margin-right: 0;
           }
         }
+      }
+      &.is-offset-#{$i} {
+        margin-left: calc(#{$width} - (#{$grid-gutter} * 2));
       }
     }
     &.is-half {

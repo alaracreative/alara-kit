@@ -32,6 +32,10 @@ a {
   }
 }
 
+.is-title { margin-bottom: 0 }
+
+.is-subtitle { margin-top: 0 }
+
 p {
   font-size: $font-size;
   line-height: $baseline;
@@ -81,12 +85,17 @@ pre {
       padding-top: 5px;
     }
     .tag {
+      display: block;
       color: red;
       .attributes {
         color: #800;
       }
     }
   }
+}
+
+.indent-1 {
+  text-indent: 1em;
 }
 
 .has-text-left {
