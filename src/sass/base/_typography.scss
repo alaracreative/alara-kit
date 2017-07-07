@@ -18,7 +18,7 @@ a {
   }
 }
 
-@each $header, $size, $line in (1, $heading-font-size-1 $heading-baseline-1),
+@each $header, $size, $line in (1, $heading-font-size-1, $heading-baseline-1),
                                (2, $heading-font-size-2, $heading-baseline-2),
                                (3, $heading-font-size-3, $heading-baseline-3),
                                (4, $heading-font-size-4, $heading-baseline-4),
