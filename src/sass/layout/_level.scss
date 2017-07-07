@@ -1,16 +1,15 @@
-.group {
+.level {
   display: flex;
-  justify-content: space-between;
 }
 
-.group-left {
+.level-left {
   align-self: flex-start;
 }
 
-.group-center {
+.level-center {
   align-self: center;
 }
 
-.group-right {
+.level-right {
   align-self: flex-end;
 }

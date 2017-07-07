@@ -1,0 +1,16 @@
+.media-object {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+  .media-image {
+    flex: 0 0 calc(100% / 3);
+    margin-right: .5rem;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+  .media-body {
+    flex: 1 0 auto;
+  }
+}

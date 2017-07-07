@@ -1,0 +1,47 @@
+@import '../../src/sass/utils/colors';
+@import '../../src/sass/utils/variables';
+@import '../../src/sass/utils/functions';
+@import '../../src/sass/utils/mixins';
+
+// example styles
+.example {
+  padding: 1em;
+  border: 1px solid rgba($black, .2);
+  border-radius: .5rem;
+  margin-bottom: 1em;
+  @include respond-to(small) {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.example-heading {
+  @include respond-to(small) {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.example-body {
+  @include respond-to(small) {
+    flex: 2;
+  }
+}
+
+.example-code {
+  @include respond-to(small) {
+    flex: 1;
+  }
+}
+
+.column-preview {
+  text-align: center;
+  color: $white;
+  line-height: 4em;
+  background: $primary;
+  &:nth-child(even) {
+    background: $secondary;
+  }
+}

@@ -1,9 +1,8 @@
-.columns {
+.row {
+  min-width: 100%;
   @include respond-to(small) {
-    // max-width: 100%;
     display: flex;
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
+    flex-wrap: nowrap;
   }
     &.justify-content--flex-end {
         justify-content: flex-end;
@@ -57,6 +56,9 @@
       flex-flow: column nowrap;
     }
 
+    &.has-wrap {
+      flex-wrap: wrap;
+    }
 }
 
 .column {
@@ -65,10 +67,16 @@
   flex-grow: 1;
   flex-shrink: 1;
   @for $i from 1 through $grid-columns {
+    $distance: ($i / $grid-columns) * 100%;
     &.is-#{$i} {
       @include respond-to(small) {
         flex: none;
-        width: ($i / $grid-columns) * 100%;
+        width: $distance;
+      }
+    }
+    &.is-offset-#{$i} {
+      @include respond-to(small) {
+        margin-left: $distance;
       }
     }
   }
@@ -76,23 +84,87 @@
     max-width: 100%;
     height: auto;
   }
-  .is-one-third {
-    width: 30%;
+  &.is-half {
+    flex: none;
+    width: 50%;
   }
-  .is-two-thirds {
-    width: 60%;
+  &.is-offset-half {
+    margin-left: 50%;
+  }
+  &.is-one-third {
+    flex: none;
+    width: calc(100%/3);
+  }
+  &.is-offset-one-third {
+    margin-left: 50%;
+  }
+  &.is-two-thirds {
+    flex: none;
+    width: calc(100%/1.5);
+  }
+  &.is-offset-two-thirds {
+    margin-left: 50%;
   }
 }
 
-.columns.has-gutters {
+.row.has-gutters {
   .column {
     @for $i from 1 through $grid-columns {
+      $width: (($i / $grid-columns) * 100%);
       &.is-#{$i} {
         @include respond-to(small) {
-          $width: (($i / $grid-columns) * 100%);
-          width: calc(#{$width} - #{$grid-gutter});
-          margin: $grid-gutter;
+          width: calc(#{$width} - (#{$grid-gutter} * 2));
+          margin-left: $grid-gutter;
+          margin-right: $grid-gutter;
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
         }
+      }
+      &.is-offset-#{$i} {
+        margin-left: calc(#{$width} - (#{$grid-gutter} * 2));
+      }
+    }
+    &.is-half {
+      @extend .column.is-half;
+      margin-left: $grid-gutter;
+      margin-right: $grid-gutter;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &.is-one-third {
+      flex: none;
+      width: 100%/3 - ($grid-gutter * 2);
+      margin-left: $grid-gutter;
+      margin-right: $grid-gutter;
+      &:first-child {
+        margin-left: 0;
+        width: 100%/3 - ($grid-gutter);
+      }
+      &:last-child {
+        margin-right: 0;
+        width: 100%/3 - ($grid-gutter);
+      }
+    }
+    &.is-two-thirds {
+      flex: none;
+      width: 100%/1.5 - ($grid-gutter * 2);
+      margin-left: $grid-gutter;
+      margin-right: $grid-gutter;
+      &:first-child {
+        margin-left: 0;
+        width: 100%/1.5 - ($grid-gutter);
+      }
+      &:last-child {
+        margin-right: 0;
+        width: 100%/1.5 - ($grid-gutter);
       }
     }
   }
