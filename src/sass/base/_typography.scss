@@ -8,6 +8,7 @@ body {
   font-family: $text-font-family;
   color: $color-text;
   background-color: transparent;
+  margin: 0;
 }
 
 a {
@@ -25,16 +26,16 @@ a {
                                (6, $heading-font-size-6, $heading-baseline-6)
 {
   h#{$header},
-  .is-title.is-#{$header},
-  .is-subtitle.is-#{$header} {
+  .title.is-#{$header},
+  .subtitle.is-#{$header} {
     font-size: $size;
     line-height: $line;
   }
 }
 
-.is-title { margin-bottom: 0 }
+.title { margin-bottom: 0 }
 
-.is-subtitle { margin-top: 0 }
+.subtitle { margin-top: 0 }
 
 p {
   font-size: $font-size;
@@ -96,6 +97,10 @@ pre {
 
 .indent-1 {
   text-indent: 1em;
+}
+
+.indent-2 {
+  text-indent: 2em;
 }
 
 .has-text-left {
