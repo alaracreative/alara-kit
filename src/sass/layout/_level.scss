@@ -1,0 +1,15 @@
+.level {
+  display: flex;
+}
+
+.level-left {
+  align-self: flex-start;
+}
+
+.level-center {
+  align-self: center;
+}
+
+.level-right {
+  align-self: flex-end;
+}
