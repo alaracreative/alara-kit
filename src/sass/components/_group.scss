@@ -1,16 +1,25 @@
 .group {
-  display: flex;
-  justify-content: space-between;
+    display: block;
+    @include respond-to(small) {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .group-left {
-  align-self: flex-start;
+    text-align: center;
+    @include respond-to(small) {
+        text-align: left;
+    }
 }
 
 .group-center {
-  align-self: center;
+    text-align: center;
 }
 
 .group-right {
-  align-self: flex-end;
+    text-align: center;
+    @include respond-to(small) {
+        text-align: right;
+    }
 }
