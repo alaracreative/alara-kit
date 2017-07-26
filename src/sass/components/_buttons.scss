@@ -2,18 +2,48 @@
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
-  padding: .75em;
+  padding: .75rem;
   cursor: pointer;
   border: 0;
+  background: $white;
+  color: $black;
+
   &.is-small {
     padding: .5rem;
     font-size: .75rem;
   }
+
+  &.is-large {
+    padding: 1rem;
+    font-size: 1.25rem;
+  }
+
   &.is-primary {
     background: $primary;
     color: $white;
     &:hover {
       background: darken($primary, 20);
     }
+  }
+
+  &.is-secondary {
+    background: $secondary;
+    color: $white;
+    &:hover {
+      background: darken($secondary, 20);
+    }
+  }
+
+  &.is-dark {
+    background: $black;
+    color: $white;
+    &:hover {
+      background: darken($black, 20);
+    }
+  }
+
+  &.is-disabled {
+    background: ligthen($black, 60);
+    cursor: arrow;
   }
 }
