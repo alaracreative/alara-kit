@@ -6,14 +6,17 @@
 .level-left {
   flex: 1;
   align-self: flex-start;
+  text-align: left;
 }
 
 .level-center {
   flex: 1;
   align-self: center;
+  text-align: center;
 }
 
 .level-right {
   flex: 1;
   align-self: flex-end;
+  text-align: right;
 }

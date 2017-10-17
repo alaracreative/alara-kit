@@ -4,11 +4,10 @@
   "description": "A web framework for Alara Creative projects. Open for all to use.",
   "main": "dist/css/core.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development webpack --progress --hide-modules",
-    "watch": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development webpack --watch --progress --hide-modules",
-    "hot": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development webpack-dev-server --inline --hot",
-    "production": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production webpack --progress --hide-modules"
+    "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +25,6 @@
   },
   "homepage": "https://github.com/alaracreative/alara-kit#readme",
   "devDependencies": {
-    "laravel-mix": "^0.10.0"
+    "laravel-mix": "^1.4.3"
   }
 }

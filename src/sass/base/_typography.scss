@@ -1,10 +1,16 @@
 html,
 body {
+  font-family: sans-serif;
   font-size: $font-size;
   line-height: $baseline;
+  text-size-adjust: 100%;
 }
 
 body {
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+  font-size: 16px;
+  line-height: 1.428;
   font-family: $text-font-family;
   color: $color-text;
   background-color: transparent;

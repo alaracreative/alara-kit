@@ -1,0 +1,91 @@
+@supports (display: grid) {
+  .grid {
+    display: grid;
+    min-height: 100vh;
+    background: hsl(53, 44%, 96%);
+    grid-template-areas: "header header"
+                          "nav  content";
+    grid-template-rows: 4rem 1fr;
+    grid-template-columns: 0 1fr;
+    @include respond-to(small) {
+      grid-template-columns: 200px 1fr;
+    }
+
+  }
+
+  .header {
+    grid-area: header;
+    color: rgba(white, .8);
+    background: rgba(black, .8);
+    font-weight: 300;
+    line-height: 2rem;
+    padding: 1rem;
+    .brand {
+      margin: 0;
+      font-size: 1.25rem;
+      line-height: 2rem;
+      font-weight: 400;
+    }
+  }
+
+  .sidenav {
+    display: grid;
+    grid-area: nav;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-row: span 2;
+    grid-template-rows: repeat(auto-fill, minmax(4rem, 1fr));
+    color: rgba(black, .8);
+    background: rgba(black,.1);
+    background: rgba(black, .75);
+    // background: hsl(215, 19%, 26%);
+  }
+
+  .sidenav-item {
+    color: rgba(black, .6);
+        color: hsl(215, 19%, 70%);
+        color: hsla(53, 44%, 96%, .8);
+    padding: .675rem .5rem;
+    border-bottom: 1px solid rgba(black, .2);
+    background: rgba(black, .025);
+    text-decoration: none;
+    font-size: .875rem;
+    &:hover {
+      color: rgba(black, .8);
+      color: hsl(215, 19%, 80%);
+      color: white;
+      background: rgba(white, .1);
+      background: hsl(215, 19%, 20%);
+      background: hsla(53, 44%, 96%, .2)
+    }
+  }
+
+  .content {
+    grid-area: content;
+    padding: 1rem;
+    color: rgba(black, .8);
+    background: rgba(black, .05);
+  }
+
+  section {
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 1px 2px rgba(black, .2);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    p {
+      margin-top: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.breadcrumbs {
+  font-size: .9rem;
+  font-weight: 300;
+  .is-active {
+    font-weight: 400;
+  }
+}
